@@ -2,19 +2,16 @@ function Sidebar({ active, setActive, collapsed, setCollapsed }) {
   return (
     <div
       className={`${
-        collapsed ? "w-12" : "w-12"
+        collapsed ? "w-12" : "w-64"
       } bg-gray-900 text-white  transition-all duration-300`}
     >
       {/* Toggle button */}
       <button
         onClick={() => setCollapsed(!collapsed)}
-        className="text-sm w-5 px-3 py-1 rounded"
+        className="text-sm px-3 py-2 rounded"
       >
         {collapsed ? "➡" : "⬅"}
       </button>
-
-      {!collapsed && <h2 className="text-xl font-bold mb-8">Admin</h2>}
-
       <ul className="space-y-2">
         <li
           onClick={() => setActive("cars")}

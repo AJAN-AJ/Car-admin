@@ -8,7 +8,7 @@ import Login from "./pages/Login";
 function App() {
   const [cars, setCars] = useState([]);
   const [active, setActive] = useState("cars"); // sidebar state
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(
     false
   );
@@ -48,7 +48,7 @@ function App() {
 
   return (
   <>
-    <div className="flex fixed bg-blue-400">
+    <div className="flex fixed">
       {/* Sidebar */}
       <Sidebar
         active={active}
