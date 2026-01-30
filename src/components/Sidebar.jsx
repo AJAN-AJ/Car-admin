@@ -2,7 +2,7 @@ function Sidebar({ active, setActive, collapsed, setCollapsed }) {
   return (
     <div
       className={`${
-        collapsed ? "w-12" : "w-[100%]"
+        collapsed ? "w-12" : "w-12"
       } bg-gray-900 text-white  transition-all duration-300`}
     >
       {/* Toggle button */}

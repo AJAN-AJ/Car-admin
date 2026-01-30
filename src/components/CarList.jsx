@@ -1,6 +1,6 @@
 function CarList({ cars, onDelete }) {
   return (
-    <div className="bg-red-400">
+    <div>
       <h2 className="text-xl font-semibold mb-4">Cars</h2>
 
       <div className="space-y-4">
