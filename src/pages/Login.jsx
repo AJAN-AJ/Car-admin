@@ -19,7 +19,7 @@ function Login({ onLogin }) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center  justify-center bg-gray-100">
       <form
         onSubmit={handleSubmit}
         className="bg-white p-8 rounded-xl shadow-lg w-96"
@@ -35,7 +35,7 @@ function Login({ onLogin }) {
         <input
           type="email"
           placeholder="Email"
-          className="w-full mb-4 p-2 border rounded"
+          className="w-full mb-4 p-2 border border-gray-400 rounded"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -44,7 +44,7 @@ function Login({ onLogin }) {
         <input
           type="password"
           placeholder="Password"
-          className="w-full mb-6 p-2 border rounded"
+          className="w-full mb-6 p-2 border border-gray-400 rounded"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required

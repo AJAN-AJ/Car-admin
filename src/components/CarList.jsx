@@ -1,6 +1,6 @@
 function CarList({ cars, onDelete }) {
   return (
-    <div>
+    <div className="bg-red-400">
       <h2 className="text-xl font-semibold mb-4">Cars</h2>
 
       <div className="space-y-4">
@@ -10,7 +10,7 @@ function CarList({ cars, onDelete }) {
           return (
             <div
               key={car.id}
-              className="flex items-center gap-4 bg-gray-100 p-4 rounded-lg"
+              className="flex w-[100%] flex-col items-center gap-4 bg-gray-100 p-4 rounded-lg"
             >
               {/* Car Image */}
               <div className="w-24 h-16 bg-gray-200 rounded overflow-hidden flex-shrink-0">

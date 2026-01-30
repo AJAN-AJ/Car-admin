@@ -47,18 +47,20 @@ function App() {
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-100">
+  <>
+    <div className="flex fixed bg-blue-400">
       {/* Sidebar */}
       <Sidebar
         active={active}
         setActive={setActive}
         collapsed={collapsed}
         setCollapsed={setCollapsed}
+        
       />
-
+      </div>
       {/* Main content */}
-      <div className="flex-1 p-8">
-        <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-xl p-6">
+      <div className="flex-1">
+        <div className="max-w-4xl mx-auto bg-white shadow-lg p-4">
           <h1 className="text-3xl font-bold mb-6 text-center">
             🚗 Car Admin Panel
           </h1>
@@ -67,7 +69,8 @@ function App() {
           {active === "cars" && <CarList cars={cars} onDelete={handleDelete} />}
         </div>
       </div>
-    </div>
+    
+  </>  
   );
 }
 
