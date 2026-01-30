@@ -1,10 +1,10 @@
-const API_URL = "http://localhost:3000";
+const API_URL = "https://car-sale-backend-1.onrender.com/";
 
 // helper: get token
 const getToken = () => localStorage.getItem("token");
 
 export const getCars = async () => {
-  const res = await fetch(`${API_URL}/cars`, {
+  const res = await fetch(`${API_URL}cars`, {
     headers: {
       Authorization: `Bearer ${getToken()}`
     }
@@ -13,7 +13,7 @@ export const getCars = async () => {
 };
 
 export const addCar = async (formdata) => {
-  const res = await fetch(`${API_URL}/cars`, {
+  const res = await fetch(`${API_URL}cars`, {
     method: "POST",
     headers: {
     Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -25,7 +25,7 @@ export const addCar = async (formdata) => {
 };
 
 export const deleteCar = async (id) => {
-  await fetch(`${API_URL}/cars/${id}`, {
+  await fetch(`${API_URL}cars/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${getToken()}`
@@ -34,7 +34,7 @@ export const deleteCar = async (id) => {
 };
 
 export const login = async (credentials) => {
-  const res = await fetch(`${API_URL}/auth/login`, {
+  const res = await fetch(`${API_URL}auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(credentials),
